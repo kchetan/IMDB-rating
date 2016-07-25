@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Jedi movie rater",
+  "description": "This extension shows imdb rating of movie",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Highlight the movie name"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://ororo.tv/en/movies"],
+      "js": ["jquery.js", "fetchmovies.js"]
+    }
+  ],
+  "icons": { "16": "icon.png",
+           "64": "icon64.png"}
+}
